@@ -1,0 +1,475 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+body{
+    background-color: rgba(195, 195, 195, 0.53);
+}
+.container{
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+}
+.profil{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    padding: 10px;
+    background-color: rgb(86, 94, 94);
+    border-radius: 5px;
+}
+
+.satu{
+    display: flex;
+    width: 45%;
+    gap: 10px;
+}
+
+.satu img{
+    width: 15%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.satu p{
+    color: rgb(242, 240, 240);
+    font-size: 25px;
+}
+
+.dua{
+    width: 45%;
+    justify-content: right;
+}
+
+.dua p{
+    color: rgb(28, 22, 22);
+    font-size: 20px;
+    text-align: right;
+}
+
+.dua span{
+    color: rgb(211, 207, 207);
+    font-size: 20px;    
+}
+
+.judul-head{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+    padding: 7px;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.546),
+    rgba(0, 0, 0, 0.639)),url(bg.jpg);
+    background-size: contain;
+    background-repeat: repeat;
+    border-radius: 5px;
+}
+
+.judul-head h1{
+    font-size: 70px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(180, 244, 249);
+}
+
+.input-box{
+    width: 100%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    margin-top: 2rem;
+    gap: 30px;
+}
+
+#task{
+    padding: 10px;
+    width: 50%;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+}
+
+#task:hover{
+    border: 1px solid rgb(0, 0, 0);
+}
+
+#priority{
+    padding: 10px;
+    width: 15%;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    text-wrap: wrap;
+}
+
+#date{
+    padding: 10px;
+    width: 15%;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#add{
+    padding: 10px;
+    width: 15%;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    background-color: rgb(86, 94, 94);
+    color: rgb(242, 240, 240);
+    cursor: pointer;
+}
+
+#add:hover{
+    background-color: rgb(178, 231, 128);
+    color: rgb(86, 90, 90);
+}
+
+#delete-all{
+    width: 100%;
+    margin-top: 2rem;
+}
+
+#delete-all button{
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    background-color: rgb(93, 35, 17);
+    color: rgb(242, 240, 240);
+    cursor: pointer;
+}
+
+#delete-all button:hover{
+    background-color: rgb(155, 181, 131);
+    color: rgb(54, 57, 57);
+}
+
+#isi-body{
+    width: 100%;
+    display: flex;
+    /* flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; */
+    gap: 5px;
+}
+
+.box{
+    margin-top: 1rem;
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.judul{
+    width: 100%;
+    height: 5.5rem;
+    text-align: center;
+    background-color: rgb(165, 165, 165);
+    color: rgb(46, 46, 46);
+    padding: 10px;
+    font-size: 15px;
+}
+
+.j2{
+    background-color: rgb(41, 52, 52);
+    color: rgb(174, 174, 174);
+}
+
+
+.card{
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    padding: 5px;
+    /* flex-wrap: wrap; */
+    /* justify-content: center; */
+    align-items: center;
+    background-color: rgb(160, 177, 164);
+    margin-top: 1rem;
+    border-radius: 5px;
+}
+.check{
+    width: 5%;
+}
+
+.isi{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.task{
+    width: 45%;
+    height: 19px;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    overflow: hidden;
+}
+
+.prio{
+    width: 15%;
+    color: rgb(55, 55, 55);    
+    font-size: 15px;   
+}
+
+.dibuat{
+    width: 20%;
+    color: rgb(55, 55, 55);    
+    font-size: 15px;    
+}
+
+.delete{
+    width: 15%;
+    height: 2rem;   
+    font-size: 15px;    
+    background-color: rgb(237, 100, 58);
+    color: rgb(245, 248, 251);
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.card .delete:hover{
+    background-color: rgb(240, 2, 2);
+} 
+
+@media screen and (max-width: 1025px) {
+    .card{
+        display: flex;
+        flex-wrap: wrap;
+        height: 6rem;
+    }
+
+    .check{
+        margin-top: 0px;
+    }
+
+    .isi{
+        display: flex;
+        flex-wrap: wrap;
+        /
+    }
+
+    .task{
+        width: 60%;
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+
+    .prio{
+        width: 30%;
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+    .dibuat{
+        margin-top: 0%;
+        width: 60%;
+    }
+    .delete{
+        margin-top: 0px;
+        width: 35%;
+    }
+
+    .input-box{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    #task{
+        width: 55%;
+    }
+    #priority{
+        width: 20%;
+    }
+    #date{
+        width: 20%;
+    }
+    #add{
+        width: 100%;
+    }
+
+    .satu img{
+        margin-top: 12px;
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media screen and (max-width: 936px) {
+    .input-box{
+        gap: 18px;
+    }
+    
+}
+
+@media screen and (max-width: 852px) {
+    .input-box{
+        gap: 17px;
+    }
+    
+}
+@media screen and (max-width: 814px) {
+    .input-box{
+        gap: 16px;
+    }   
+}
+@media screen and (max-width: 775px) {
+    .input-box{
+        gap: 15px;
+    }   
+}
+@media screen and (max-width: 735px) {
+    #task{
+        width: 62.2%;
+    }
+    #priority{
+        width: 35%;
+    }
+    #date{
+        width: 100%;
+    }
+    #add{
+        width: 100%;
+    }  
+}
+@media screen and (max-width: 715px) {
+    .satu img{
+        margin-top: 28px;
+    }  
+}
+@media screen and (max-width: 667px) {
+    #task{
+        width: 100%;
+    }
+    #priority{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .card{
+        display: flex;
+        flex-wrap: wrap;
+        height: 8rem;
+    }
+
+    .isi{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .dibuat{
+        margin-bottom: 0%;
+    }
+    .delete{
+        margin-top: 0px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .profil{
+        display: flex;
+        flex-wrap: wrap;
+        
+        gap: 0px;
+    }
+    .satu{
+        width: 100%;
+        justify-content: center;
+    }
+    .satu img{
+        margin-top: 12px;
+        width: 50px;
+        height: 50px;
+    }
+    .dua{
+        width: 100%;
+        padding-right: 57px;
+    }
+    #isi-body{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #box-task1{
+        width: 100%;
+    }
+    #box-task2{
+        width: 100%;
+    }
+    .judul-head h1{
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 524px) {
+    .dua{
+        padding-right: 50px;
+    }
+}
+@media screen and (max-width: 508px) {
+    .dua{
+        padding-right: 40px;
+    }
+}
+@media screen and (max-width: 488px) {
+    .dua{
+        padding-right: 30px;
+    }
+}
+@media screen and (max-width: 471px) {
+    .dua{
+        padding-right: 30px;
+    }
+}
+@media screen and (max-width: 469px) {
+    .dua{
+        padding-right: 28px;
+    }
+}
+@media screen and (max-width: 465px) {
+    .dua{
+        padding-right: 25px;
+    }
+}
+@media screen and (max-width: 498px) {
+    .dua{
+        padding-right: 20px;
+    }
+}
+@media screen and (max-width: 488px) {
+    .satu{
+        padding-right: 15px;
+    }
+    .satu img{
+        padding-left: 0%;
+    }
+}
+@media screen and (max-width: 478px) {
+    .dua{
+        padding-right: 15px;
+    }
+}
+@media screen and (min-width: 375px) {
+    .satu{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .satu img{
+        margin-top: 0px;
+        margin-left: 30px;
+        width: 50px;
+        height: 50px;
+    }
+    .dua{
+        width: 100%;
+        padding-right: 30px;
+    }
+}

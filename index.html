@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="profil">
+            <section class="satu">
+                <img src="profile.png" alt="profile picture">
+                <p>Faishal Alfiansyah</p>
+            </section>
+            <section class="dua">
+                <p>Role Position : <span>Web Developer</span></p>
+            </section>
+        </div>
+        <div class="judul-head">
+            <h1>To Do List</h1>
+        </div>
+        <div class="input-box">
+            <input type="text" placeholder="Masukkan Tugas" id="task">
+            <select name="" id="priority">
+                <option value="high">Priorty High</option>
+                <option value="medium">Priorty Medium</option>
+                <option value="low">Priorty Low</option>
+            </select>
+            <input type="date" id="date">
+            <button id="add">Tambah</button>
+        </div>
+        <div id="delete-all">
+            <button>Delete All Task</button>
+        </div>
+        <div id="isi-body">
+            <div id="box-task1" class="box">
+                <div id="judul-uncompleted" class="judul">
+                    <h2>Task Uncompleted</h2>
+                </div>
+                <!-- card -->
+                <!-- <div class="card">
+                    <input type="checkbox" class="check">
+                    <div class="isi">
+                        <p class="task">belajar javascriptbdaaaaaa wttsgsg</p>
+                        <p class="prio">medium</p>
+                        <p class="dibuat">2021-12-20</p>
+                        <button type="button" class="delete">Delete</button>
+                    </div>
+                </div> -->
+                <!--  -->
+            </div>
+            <div id="box-task2" class="box">
+                <div id="judul-completed" class="judul j2">
+                    <h2>Task Completed</h2>
+                </div>
+                <!-- card -->
+                <!-- <div class="card">
+                    <input type="checkbox" class="check">
+                    <div class="isi">
+                        <p class="task">belajar javascript</p>
+                        <p class="prio">medium</p>
+                        <p class="dibuat">2021-12-20</p>
+                        <button type="button" class="delete">Delete</button>
+                    </div>
+                </div> -->
+                <!--  -->
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
