@@ -8,8 +8,12 @@ const boxTask2 = document.getElementById("box-task2");
 
 addBtn.addEventListener("click", addTask);
 deleteAll.addEventListener("click", function(){
-    boxTask1.lastChild.remove();
-    boxTask2.lastChild.remove();
+    for(let i = 0; i < boxTask1.children.length; i++){
+        boxTask1.lastChild.remove();
+    }
+    for(let i = 0; i < boxTask2.children.length; i++){
+        boxTask2.lastChild.remove();
+    }
     localStorage.clear();
 });
 let angka = 0;
