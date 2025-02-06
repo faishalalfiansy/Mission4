@@ -8,7 +8,7 @@ const boxTask2 = document.getElementById("box-task2");
 
 addBtn.addEventListener("click", addTask);
 deleteAll.addEventListener("click", function(){
-    for(let i = 0; i < todos.length; i++){
+    for(let i = 0; i < boxTask2.children.length; i++){
         boxTask1.lastChild.remove();
     }
     for(let i = 0; i < boxTask2.children.length; i++){
