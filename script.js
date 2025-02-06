@@ -8,13 +8,15 @@ const boxTask2 = document.getElementById("box-task2");
 
 addBtn.addEventListener("click", addTask);
 deleteAll.addEventListener("click", function(){
-    for(let i = 0; i < boxTask2.children.length; i++){
-        boxTask1.lastChild.remove();
-    }
-    for(let i = 0; i < boxTask2.children.length; i++){
-        boxTask2.lastChild.remove();
-    }
-    tampilanTask.remove ();
+    // for(let i = 0; i < boxTask1.children.length; i++){
+    //     boxTask1.lastChild.remove();
+    // }
+    // for(let i = 0; i < boxTask2.children.length; i++){
+    //     boxTask2.lastChild.remove();
+    // }
+    // tampilanTask.remove ();
+    boxTask1.innerHTML = "";
+    boxTask2.innerHTML = "";
     localStorage.clear();
 });
 let angka = 0;
