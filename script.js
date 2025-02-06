@@ -5,18 +5,14 @@ const addBtn = document.getElementById("add");
 const deleteAll = document.getElementById("delete-all");
 const boxTask1 = document.getElementById("box-task1");
 const boxTask2 = document.getElementById("box-task2");
+const isiBody = document.getElementById("isi-body");
 
 addBtn.addEventListener("click", addTask);
 deleteAll.addEventListener("click", function(){
-    // for(let i = 0; i < boxTask1.children.length; i++){
-    //     boxTask1.lastChild.remove();
-    // }
-    // for(let i = 0; i < boxTask2.children.length; i++){
-    //     boxTask2.lastChild.remove();
-    // }
-    // tampilanTask.remove ();
-    boxTask1.innerHTML = "";
-    boxTask2.innerHTML = "";
+    const hapus = document.querySelectorAll(".card");
+    for(let i = 0; i < hapus.length; i++){
+        hapus[i].remove();
+    }
     localStorage.clear();
 });
 let angka = 0;
@@ -68,6 +64,10 @@ function tampilanTask(newTasklis){
             boxTask2.appendChild(newTask);
             task.style.textDecoration = "line-through";
             saveLocal2(newTasklis2);
+            deleteBtn.addEventListener("click", function(newTasklis){
+                newTask.remove();
+                removeLocalTodos(newTasklis.id);
+            })
         }else{
             const newTasklis2 = {
                 task: newTasklis.task,
@@ -98,7 +98,10 @@ function tampilanTask(newTasklis){
 
     deleteBtn.addEventListener("click", function(newTasklis){
         newTask.remove();
-        removeLocalTodos(newTasklis.id);
+        if(boxTask1.contains(newTask)){
+            removeLocalTodos(newTasklis.id);
+        }
+        // removeLocalTodos(newTasklis.id);
     });
 
     newTask.appendChild(divIsi);
@@ -143,10 +146,11 @@ function removeLocalTodos(todo) {
     }
     const index = todos.findIndex(todos => todos.id === todo);
     if(index !== todos.length - 1) {
-        todos.splice(todos.task, 1);
+        todos.splice(todos.id, 1);
     }
     localStorage.setItem("todos", JSON.stringify(todos));
 }
+
 // function removeLocalTodos2(todo) {
 //     let todos;
 //     if(localStorage.getItem("todos2") === null) {
@@ -172,4 +176,3 @@ function getLocal() {
 }
 
 document.addEventListener("DOMContentLoaded", getLocal);
-
